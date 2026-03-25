@@ -33,4 +33,3 @@ def desencriptar(texto_encriptado: str, llave: str) -> str:
     cipher = AES.new(key, AES.MODE_CBC, iv)
     pt = unpad(cipher.decrypt(ct), AES.block_size)
     return pt.decode("utf-8")
-
